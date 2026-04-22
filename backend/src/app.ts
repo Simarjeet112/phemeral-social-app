@@ -13,7 +13,12 @@ import circleRoutes from "./routes/circle.routes";
 const app = express();
 
 app.use(cors({
-  origin: ["http://localhost:3000", "http://192.168.1.2:3000"],
+  origin: [
+    "http://localhost:3000",
+    "http://192.168.1.2:3000",
+    "https://phemeral-social-app-1.onrender.com",
+    process.env.FRONTEND_URL || ""
+  ],
   credentials: true,
 }));
 app.use(express.json());

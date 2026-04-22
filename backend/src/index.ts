@@ -13,6 +13,7 @@ const io = new Server(httpServer, {
     origin: [
       "http://localhost:3000",
       "http://192.168.1.2:3000",
+      "https://phemeral-social-app-1.onrender.com",
       process.env.FRONTEND_URL || ""
     ],
     credentials: true,
