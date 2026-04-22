@@ -11,6 +11,7 @@ import aiRoutes from "./routes/ai.routes";
 import circleRoutes from "./routes/circle.routes";
 
 const app = express();
+app.set("trust proxy", 1);
 
 app.use(cors({
   origin: [
