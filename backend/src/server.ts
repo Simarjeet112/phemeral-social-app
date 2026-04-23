@@ -14,13 +14,7 @@ const app = express();
 app.set("trust proxy", 1);
 
 app.use(cors({
-  origin: [
-    "http://localhost:3000",
-    "http://192.168.1.2:3000",
-    "http://frontend:3000",
-    "https://phemeral-social-app-1.onrender.com",
-    process.env.FRONTEND_URL || ""
-  ],
+  origin: true,
   credentials: true,
 }));
 app.use(express.json());
